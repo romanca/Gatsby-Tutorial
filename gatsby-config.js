@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `  UPOZORNENIE: Rady a informácie na tejto stránke sú len
+    všeobecné, nenahrádzajú rady skutočného lekára. Preto použitie
+    liečivých rastlín konzultujte so svojím lekárom. Tvorcovia
+    tohoto webu nezodpovedajú za zdravotné problemy alebo ujmy na
+    zdraví, ktoré budú výsledkom nesprávneho výkladu obsahu tohoto
+    servera bez porady s lekárom.`,
     author: `@gatsbyjs`,
   },
   plugins: [
