@@ -9,7 +9,7 @@ import Divider from "@material-ui/core/Divider"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import LOGO1 from "../images/LOGO1.png"
-import HERBS from "../images/HERBS.jpeg"
+import HERBS1 from "../images/HERBS1.jpg"
 import "typeface-roboto"
 
 const useStyles = makeStyles(theme => ({
@@ -117,6 +117,7 @@ const useStyles = makeStyles(theme => ({
   },
   bottomText: {
     fontSize: "10px",
+    fontWeight: "normal",
     marginTop: "20px",
   },
   bottomText1: {
@@ -131,7 +132,24 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const IndexPage = () => {
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
+
+const IndexPage = ({ data }) => {
   const classes = useStyles()
 
   return (
@@ -221,21 +239,27 @@ const IndexPage = () => {
             </Paper>
           </Grid>
           <Grid item xs={9}>
-            <Paper className={classes.rightPaper}>
-              <Typography variant="h2" className={classes.font}>
-                Liečivá sila prírody
-              </Typography>
-              <img src={HERBS} alt="HERBS" className={classes.herbsImage} />
-              <Typography className={classes.bottomText1}>
-                {" "}
-                <strong>
-                  {" "}
-                  Na tejto stránke nájdete široký sortiment liečivých
-                  byliniek,bylinkových produktov a bylinkových receptov.{" "}
-                </strong>
-              </Typography>
-              <Divider className={classes.divider} />
-            </Paper>
+            <div>
+              {data.allMarkdownRemark.edges.map(({ node }) => (
+                <div key={node.id}>
+                  <Paper className={classes.rightPaper}>
+                    <Typography variant="h2" className={classes.font}>
+                      {node.frontmatter.title}{" "}
+                    </Typography>
+                    <img
+                      src={HERBS1}
+                      alt="HERBS"
+                      className={classes.herbsImage}
+                    />
+                    <Typography className={classes.bottomText1}>
+                      {" "}
+                      <strong>{node.excerpt}</strong>
+                    </Typography>
+                    <Divider className={classes.divider} />
+                  </Paper>
+                </div>
+              ))}
+            </div>
           </Grid>
         </Grid>
       </div>
