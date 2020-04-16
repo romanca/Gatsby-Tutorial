@@ -4,6 +4,7 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
+import { Link } from "gatsby"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +40,9 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     backgroundColor: "#004d40",
   },
+  link: {
+    textDecoration: "none",
+  },
 }))
 
 const Header = () => {
@@ -50,7 +54,9 @@ const Header = () => {
           {" "}
           <div className={classes.root}>
             <Button variant="contained" className={classes.button}>
-              HOME
+              <Link className={classes.link} to="/">
+                HOME
+              </Link>
             </Button>
             <Button variant="contained" className={classes.button}>
               Zelenina

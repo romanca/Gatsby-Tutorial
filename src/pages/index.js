@@ -132,24 +132,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
-
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   const classes = useStyles()
 
   return (
@@ -165,7 +148,12 @@ const IndexPage = ({ data }) => {
                     component="h2"
                     className={classes.sidebar}
                   >
-                    <Link className={classes.link}>Herbar</Link>
+                    <Link
+                      className={classes.link}
+                      to="../templates/blog-herbs/"
+                    >
+                      Herbar
+                    </Link>
                   </Typography>
                 </ListItem>
               </List>
@@ -240,42 +228,26 @@ const IndexPage = ({ data }) => {
           </Grid>
           <Grid item xs={9}>
             <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <div key={node.id}>
-                  <Paper className={classes.rightPaper}>
-                    <Typography variant="h2" className={classes.font}>
-                      {node.frontmatter.title}{" "}
-                    </Typography>
-                    <img
-                      src={HERBS1}
-                      alt="HERBS"
-                      className={classes.herbsImage}
-                    />
-                    <Typography className={classes.bottomText1}>
-                      {" "}
-                      <strong>{node.excerpt}</strong>
-                    </Typography>
-                    <Divider className={classes.divider} />
-                  </Paper>
-                </div>
-              ))}
+              <Paper className={classes.rightPaper}>
+                <Typography variant="h2" className={classes.font}>
+                  Liečivá sila prírody
+                </Typography>
+                <img src={HERBS1} alt="HERBS" className={classes.herbsImage} />
+                <Typography className={classes.bottomText1}>
+                  {" "}
+                  <strong>
+                    Na tejto stránke nájdete široký sortiment liečivých
+                    byliniek,bylinkových produktov a bylinkových receptov.
+                  </strong>
+                </Typography>
+                <Divider className={classes.divider} />
+              </Paper>
             </div>
           </Grid>
         </Grid>
       </div>
     </Layout>
   )
-  // <Layout>
-  //   {/* <div>
-  //     <Image />
-  //   </div>
-  //   <button class="primary-button">
-  //     <Link to="/page-2/">Go to page 2</Link>
-  //   </button>
-  //   <button class="primary-button">
-  //     <Link to="/about/">ABOUT</Link>
-  //   </button> */}
-  // </Layout>
 }
 
 export default IndexPage
