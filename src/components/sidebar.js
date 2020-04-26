@@ -23,7 +23,7 @@ const SideBar = ({ data }) => {
               query={query}
               render={data => (
                 <div>
-                  {data.allMarkdownRemark.edges.map(({ node }) => (
+                  {data.allMarkdownRemark.edges.map(({ node, slug }) => (
                     <div key={node.id}>
                       <Link className={classes.link} to={node.fields.slug}>
                         <h3>{node.frontmatter.title} </h3>
@@ -49,7 +49,6 @@ export const query = graphql`
     ) {
       edges {
         node {
-          id
           frontmatter {
             title
           }

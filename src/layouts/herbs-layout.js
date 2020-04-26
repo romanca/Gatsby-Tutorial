@@ -6,7 +6,7 @@ const HerbsLayout = ({ children }) => {
     <>
       <Header />
       <div>
-        <main className={classes.root}>{children}</main>
+        <main>{children}</main>
       </div>
     </>
   )

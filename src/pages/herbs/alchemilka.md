@@ -1,7 +1,7 @@
 ---
 title: "Alchemilka"
 category: "herbs"
-image: ../../levandula.jpg
+featuredImage: ../levandula.jpg
 ---
 
 ALchemilka

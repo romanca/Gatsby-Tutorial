@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import HerbsLayout from "../../layouts/herbs-layout"
+import HerbsLayout from "../layouts/herbs-layout"
 import { makeStyles } from "@material-ui/core/styles"
 import Grid from "@material-ui/core/Grid"
 import Paper from "@material-ui/core/Paper"
-import SideBar from "../../components/sidebar"
+import SideBar from "../components/sidebar"
 import Img from "gatsby-image"
 
 const useStyles = makeStyles(theme => ({
@@ -82,6 +82,7 @@ export default BlogPage
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
       html
       frontmatter {
         title
