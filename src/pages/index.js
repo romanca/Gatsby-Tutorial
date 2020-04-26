@@ -150,7 +150,7 @@ const IndexPage = () => {
                   >
                     <Link
                       className={classes.link}
-                      to="../templates/blog-herbs/"
+                      to="../herbs/herbs-mainpage-layout"
                     >
                       Herbar
                     </Link>

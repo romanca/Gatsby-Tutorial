@@ -1,5 +1,0 @@
----
-title: "kapusta"
----
-
-kapusta
