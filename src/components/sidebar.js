@@ -8,6 +8,7 @@ import List from "@material-ui/core/List"
 const useStyles = makeStyles(theme => ({
   link: {
     textDecoration: "none",
+    color: "black",
   },
 }))
 
