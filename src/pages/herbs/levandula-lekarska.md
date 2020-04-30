@@ -2,7 +2,7 @@
 title: "Levanduľa lekárska"
 name: "(Levandula officinalis)"
 category: "herbs"
-image: ../../images/herbs/levandula.jpg
+image: ../../images/herbs/levandula-lekarska.jpeg
 ---
 
 <strong> Úžitok : </strong> Pri podráždenosti, búšenie srdca, migréne, poruchách trávenia či črevnom nadúvaní môžeme použiť nálev. Levanduľa pôsobí ako upokojujúci prostriedok a súčasne antibioticky a povzbudzuje pankreas k vyššej tvorbe enzýmov. Olej z levandule je výborný pri relaxácii. Tinktúru možno použiť ako prekrvujúci prostriedok pri reumatických a ischiatických bolestiach.

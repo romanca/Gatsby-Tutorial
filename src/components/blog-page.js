@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: 300,
-    height: 300,
+    height: 400,
     borderRadius: "8px",
     marginRight: 8,
     float: "left",
@@ -63,9 +63,10 @@ const useStyles = makeStyles(theme => ({
     marginTop: 70,
     marginLeft: -80,
     maxWidth: 1100,
-    borderRadius: "15px 50px 30px",
+    borderRadius: "10px",
     backgroundColor: "#fff59d",
     boxShadow: "3px 5px 5px 1px",
+    overflow: "scroll",
   },
   leftPaper: {
     padding: theme.spacing(2),
@@ -74,14 +75,19 @@ const useStyles = makeStyles(theme => ({
     height: 640,
     marginTop: 70,
     maxWidth: 230,
-    borderRadius: "15px 50px 30px",
+    borderRadius: "8px",
     backgroundColor: "#fdd835",
     boxShadow: "3px 5px 5px 1px",
+    overflowY: "scroll",
+    overflowX: "hidden",
   },
   bottomText: {
     textAlign: "left",
     marginLeft: "0px",
     marginTop: 10,
+  },
+  sidebar: {
+    marginTop: -40,
   },
   content: {
     textAlign: "left",
@@ -100,7 +106,9 @@ const BlogPage = ({ data }) => {
         <Grid container spacing={2} className={classes.gridList}>
           <Grid item xs={3}>
             <Paper className={classes.leftPaper}>
-              <SideBar />
+              <div className={classes.sidebar}>
+                <SideBar />
+              </div>
             </Paper>
           </Grid>
           <Grid item xs={9}>

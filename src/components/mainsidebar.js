@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "./layout"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
@@ -9,8 +9,6 @@ import Divider from "@material-ui/core/Divider"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import LOGO1 from "../images/LOGO1.png"
-import HERBS1 from "../images/HERBS1.jpg"
-import "typeface-roboto"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -132,7 +130,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const IndexPage = () => {
+const MainSideBar = () => {
   const classes = useStyles()
 
   return (
@@ -230,20 +228,7 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={9}>
             <div>
-              <Paper className={classes.rightPaper}>
-                <Typography variant="h2" className={classes.font}>
-                  Liečivá sila prírody
-                </Typography>
-                <img src={HERBS1} alt="HERBS" className={classes.herbsImage} />
-                <Typography className={classes.bottomText1}>
-                  {" "}
-                  <strong>
-                    Na tejto stránke nájdete široký sortiment liečivých
-                    byliniek,bylinkových produktov a bylinkových receptov.
-                  </strong>
-                </Typography>
-                <Divider className={classes.divider} />
-              </Paper>
+              <Paper className={classes.rightPaper}></Paper>
             </div>
           </Grid>
         </Grid>
@@ -252,4 +237,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default MainSideBar

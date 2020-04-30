@@ -2,7 +2,7 @@
 title: "Baza čierna"
 name: "(Sambucus nigra)"
 category: "herbs"
-image: ../../images/herbs/bazacierna.jpg
+image: ../../images/herbs/baza-cierna.jpg
 ---
 
 <strong> Úžitok :</strong> zvyšuje obranyschopnosť organizmu. Je liekom na choroby z prechladnutia. Stimuluje potenie a zlepšuje vykašliavanie. V kombinácií s inými bylinkami, najmä lipou a materinou dúškov zvyšuje svoj účinok. Mladé listy osožia pri jarných kúrach napomáhajúcich látkovú premenu. Kvet čiernej bazy má čistiaci účinok a vyplavuje toxíny z nášho tela. Plody bazy sa používajú na tíšenie bolestí nervového pôvodu.

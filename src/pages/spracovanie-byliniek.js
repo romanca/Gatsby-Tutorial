@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
@@ -9,8 +8,7 @@ import Divider from "@material-ui/core/Divider"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import LOGO1 from "../images/LOGO1.png"
-import HERBS1 from "../images/HERBS1.jpg"
-import "typeface-roboto"
+import Layout from "../components/layout"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -99,6 +97,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     color: theme.palette.text.secondary,
     fontSize: "25px",
+    color: "black",
     fontFamily: [
       "Brush Script MT",
       "Snell Roundhand",
@@ -130,9 +129,49 @@ const useStyles = makeStyles(theme => ({
     marginTop: "25px",
     color: "black",
   },
+  contentTitle: {
+    textAlign: "left",
+    fontSize: 60,
+    color: "black",
+    fontFamily: [
+      // "Brush Script MT",
+      "Snell Roundhand",
+      "Apple Chancery",
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
+  content: {
+    textAlign: "left",
+    color: "black",
+    fontSize: 20,
+    fontFamily: [
+      // "Brush Script MT",
+      // "Snell Roundhand",
+      // "Apple Chancery",
+      // "-apple-system",
+      // "BlinkMacSystemFont",
+      // '"Segoe UI"',
+      // "Roboto",
+      // '"Helvetica Neue"',
+      // "Arial",
+      // "sans-serif",
+      // '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
 }))
 
-const IndexPage = () => {
+const CasZberuByliniek = () => {
   const classes = useStyles()
 
   return (
@@ -231,18 +270,40 @@ const IndexPage = () => {
           <Grid item xs={9}>
             <div>
               <Paper className={classes.rightPaper}>
-                <Typography variant="h2" className={classes.font}>
-                  Liečivá sila prírody
+                <Typography className={classes.contentTitle}>Zber</Typography>{" "}
+                <Typography className={classes.content}>
+                  Nadzemné časti rastlín zbierame zvyčajne pri slnečnom a suchom
+                  počasí, keď nie je na nich vlhkosť alebo rosa. Najlepšie
+                  predpoludním, kým nie je ešte moc teplo. Listy zbierame ešte
+                  pred začiatkom kvitnutia rastliny. Zbierame len dobre vyvinuté
+                  listy, nezakrpatené, zdravé, nepoškodené, nezožltnuté, bez
+                  škvŕn, čisté a nezaprášené. Kvety zbierame potom, ako sa
+                  rozvijú. Podľa potreby celé, alebo len lupienky. Nemali by byť
+                  zvädnuté, zoschnuté, poškodené hmyzom alebo inak porušené,
+                  lebo tým sa stávajú bezcennými. Sú dosť chúlostivé, preto
+                  musíme s nimi pozorne zaobchádzať. Vňať zbierame vtedy, keď
+                  rastlina kvitne, alebo kvitnúť ešte len začína. Z rastlín s
+                  vyššou byľou zbierame len kvetné vŕšky (tak asi 15—30 cm od
+                  vrchu). Plody zbierame zrelé, alebo prípadne tesne pred
+                  dozretím, ak ide o plody, ktoré sa pri dozretí ľahko uvoľňujú,
+                  rozletujú, vypadávajú a pod. Choré, zaschnuté, zhnité, staré,
+                  nezrelé a ostatné chybné kusy odstránime.{" "}
+                  <Typography className={classes.contentTitle}>
+                    Sušenie
+                  </Typography>{" "}
+                  Sušenie je najjednoduchší a najrozšírenejší spôsob
+                  konzervácie. Sušíme prirodzeným alebo umelým teplom. Doba
+                  sušenia sa mení v závislosti od danej rastliny a jej sušených
+                  častí. Nazbierané rastliny pred sušením dôkladne preberieme a
+                  prezrieme. Bylinky sú vtedy suché, keď sa stanú lámavými a pri
+                  dotyku praskajú. Bobule a korene nesmú byť ani vnútri mäkké.
+                  Dĺžka sušenia závisí od vzduchu, teploty a povahy sušeného
+                  materiálu. Teplota má byť spravidla 30—40 °C, pri koreňoch a
+                  kôre aj vyššia. Rastliny, ktorých obsahové látky sa ľahko
+                  rozkladajú, sušíme pri teplote 40—60 °C. Silicové rastliny
+                  sušíme pri teplote do 35 °C. Na korene sa odporúča 15 – 20 dní
+                  sušenia, na listy 8 – 10 dní, 3 – 4 dni na kvety.
                 </Typography>
-                <img src={HERBS1} alt="HERBS" className={classes.herbsImage} />
-                <Typography className={classes.bottomText1}>
-                  {" "}
-                  <strong>
-                    Na tejto stránke nájdete široký sortiment liečivých
-                    byliniek,bylinkových produktov a bylinkových receptov.
-                  </strong>
-                </Typography>
-                <Divider className={classes.divider} />
               </Paper>
             </div>
           </Grid>
@@ -251,5 +312,4 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
-export default IndexPage
+export default CasZberuByliniek

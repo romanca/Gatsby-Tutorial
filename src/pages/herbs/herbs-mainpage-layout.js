@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
   },
   gridList: {
-    width: 1800,
+    maxWidth: 1800,
     height: 450,
   },
   image: {
@@ -26,20 +26,19 @@ const useStyles = makeStyles(theme => ({
     float: "left",
     marginTop: 10,
   },
-
   rightPaper: {
     padding: theme.spacing(2),
-    textAlign: "right",
+    textAlign: "center",
     color: theme.palette.text.secondary,
     height: 640,
     marginTop: 70,
-    marginLeft: -170,
+    marginLeft: -80,
     maxWidth: 1100,
-    borderRadius: "15px 50px 30px",
+    borderRadius: "10px",
     backgroundColor: "#fff59d",
     boxShadow: "3px 5px 5px 1px",
+    overflow: "scroll",
   },
-
   leftPaper: {
     padding: theme.spacing(2),
     textAlign: "center",
@@ -47,14 +46,18 @@ const useStyles = makeStyles(theme => ({
     height: 640,
     marginTop: 70,
     maxWidth: 230,
-    borderRadius: "15px 50px 30px",
+    borderRadius: "8px",
     backgroundColor: "#fdd835",
     boxShadow: "3px 5px 5px 1px",
+    overflow: "scroll",
   },
   bottomText: {
     textAlign: "left",
     marginLeft: "0px",
     marginTop: 10,
+  },
+  sidebar: {
+    marginTop: -40,
   },
 }))
 
@@ -67,7 +70,9 @@ const HerbsMainPageLayout = () => {
         <Grid container spacing={2} className={classes.gridList}>
           <Grid item xs={3}>
             <Paper className={classes.leftPaper}>
-              <SideBar />
+              <div className={classes.sidebar}>
+                <SideBar />
+              </div>
             </Paper>
           </Grid>
           <Grid item xs={9}>

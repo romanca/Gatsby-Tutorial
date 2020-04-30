@@ -2,7 +2,7 @@
 title: "Alchemilka obyčajná"
 name: "(Alchemilka xanthochlora)"
 category: "herbs"
-image: ../../images/herbs/alchemilkaobycajna.jpg
+image: ../../images/herbs/alchemilka-obycajna.jpg
 ---
 
 Úžitok : pomáha pri kožných chorobách. Urýchľuje hojenie rán, kožných vredov, ekzémov a vyrážok. Osoží aj pri ženských chorobách. Posilňuje maternicu a tým uľahčuje pôrod. Odstraňuje slabosť svalov a končatín. Je vhodná do bylinkových zmesí v kombinácii s pastierskou kapsičkou a rebríčkom.
